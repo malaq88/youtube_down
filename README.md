@@ -16,27 +16,27 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente de desen
 2. Navegue até o diretório raiz do projeto.
 
    ```shell
-   cd youtube_down
+cd youtube_down
 Crie um ambiente virtual e ative-o.
 
-shell
+   ```shell
 Copy code
 python3 -m venv env
 source env/bin/activate
 Instale as dependências do projeto.
 
-shell
+   ```shell
 Copy code
 pip install -r requirements.txt
 Uso
 Inicie o servidor de desenvolvimento Django.
 
-shell
+   ```shell
 Copy code
 python manage.py runserver
 Acesse o aplicativo em seu navegador, utilizando o seguinte endereço:
 
-arduino
+   ```shell
 Copy code
 http://localhost:8000/
 Na página inicial, você verá um formulário chamado "Baixar vídeo".
