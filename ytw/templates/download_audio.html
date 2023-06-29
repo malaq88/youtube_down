@@ -1,0 +1,73 @@
+<!-- download_audio.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download de Áudio</title>
+    <style>
+        /* Estilos CSS para o cabeçalho */
+        header {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        /* Estilos CSS para o corpo */
+        main {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        /* Estilos CSS para o rodapé */
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Download de Áudio</h1>
+    </header>
+
+    <main>
+        <form method="post" action="{% url 'download_audio' %}">
+            {% csrf_token %}
+            <label for="video_url">URL do vídeo:</label>
+            <input type="text" id="video_url" name="video_url" required>
+
+            <button type="submit">Baixar Áudio</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2023 Seu Nome</p>
+    </footer>
+</body>
+</html>
